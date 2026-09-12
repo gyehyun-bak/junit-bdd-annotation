@@ -55,3 +55,4 @@ class MemberTest {
 
 - 그냥 각 어노테이션의 `value`를 추출해서 문자열을 취향껏 만드는 것이기 때문에, 원한다면 중간에 화살표(`→`)를 넣는 등 마음껏 꾸밀 수도 있다. 개인적으로는 너무 지저분해지는 것 같아 띄워쓰기로 그쳤다.
 - `BddDisplayNameGenerator`를 참조.
+- `@DisplayNameGeneration(BddDisplayNameGenerator.class)`를 테스트 클래스에 붙여주므로써 적용할 `DisplayNameGenerator` 클래스를 지정해줘야 하는데, 조금 예쁘게 `@BDD`라는 메타 어노테이션으로 묶었다.
