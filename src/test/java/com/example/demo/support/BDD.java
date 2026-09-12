@@ -6,5 +6,5 @@ import org.junit.jupiter.api.DisplayNameGeneration;
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
-@DisplayNameGeneration(WhenShouldDisplayNameGenerator.class)
+@DisplayNameGeneration(BddDisplayNameGenerator.class)
 public @interface BDD {}

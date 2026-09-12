@@ -4,7 +4,7 @@ import java.lang.reflect.Method;
 import java.util.List;
 import org.junit.jupiter.api.DisplayNameGenerator;
 
-public class WhenShouldDisplayNameGenerator implements DisplayNameGenerator {
+public class BddDisplayNameGenerator implements DisplayNameGenerator {
 
     @Override
     public String generateDisplayNameForClass(Class<?> testClass) {
