@@ -58,7 +58,7 @@ class MemberTest {
     class WhenActive {
         @Test
         @When("사용자가 대기(PENDING) 상태라면")
-        @Should("상태를 활성(ACTIVE)로 바꿔야한다.")
+        @Should("상태를 활성(ACTIVE)으로 바꿔야한다.")
         void shouldSuccessfullyActive() {
             Member member = pending();
 
@@ -71,7 +71,7 @@ class MemberTest {
         @EnumSource(
                 value = MemberStatus.class,
                 names = {"ACTIVE", "SUSPENDED", "WITHDRAWN"})
-        @When("사용자가 대기(PENDING)이 아닌 다른 상태라면")
+        @When("사용자가 대기(PENDING)가 아닌 다른 상태라면")
         @Should("IllegalStateException을 던져야 한다.")
         void shouldThrowException_WhenNotPending(MemberStatus status) {
             Member member = of(status).create();
@@ -139,7 +139,7 @@ class MemberTest {
     class WhenWithdraw {
         @Test
         @When("사용자가 활성(ACTIVE) 상태라면")
-        @Should("사용자의 상태를 탈퇴(WITHDRAWN)으로 바꿔야 한다.")
+        @Should("사용자의 상태를 탈퇴(WITHDRAWN)로 바꿔야 한다.")
         void shouldSuccessfullyWithdraw_whenActive() {
             Member member = active();
 
@@ -150,7 +150,7 @@ class MemberTest {
 
         @Test
         @When("사용자가 중지(SUSPENDED) 상태라면")
-        @Should("사용자의 상태를 탈퇴(WITHDRAWN)으로 바꿔야 한다.")
+        @Should("사용자의 상태를 탈퇴(WITHDRAWN)로 바꿔야 한다.")
         void shouldSuccessfullyWithdraw_whenSuspended() {
             Member member = suspended();
 
