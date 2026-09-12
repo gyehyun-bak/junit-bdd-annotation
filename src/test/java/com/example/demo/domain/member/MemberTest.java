@@ -55,7 +55,7 @@ class MemberTest {
 
     @Nested
     @When("사용자를 활성화할 때")
-    class WhenActive {
+    class WhenActivate {
         @Test
         @When("사용자가 대기(PENDING) 상태라면")
         @Should("상태를 활성(ACTIVE)으로 바꿔야한다.")
